@@ -3,14 +3,14 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'mvn --version'
+        bat 'mvn --version'
       }
     }
     stage('Backend') {
       parallel {
         stage('perf') {
           steps {
-            sh 'echo "perf"'
+            build 'TEST_JOB'
           }
         }
         stage('Unit') {
