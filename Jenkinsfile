@@ -13,7 +13,7 @@ pipeline {
       parallel {
         stage('perf') {
           steps {
-            build job: 'TEST_JOB' , parameters:[ string(name: 'VALUE_NAME',value: SVNCHKOUTURL) ]
+            build job: 'TEST_JOB' , parameters:[ string(name: 'VALUE_NAME',value: "${params.SVNCHKOUTURL)" ]
           }
         }
         stage('Unit') {
