@@ -15,14 +15,14 @@ pipeline {
         }
         stage('Unit') {
           steps {
-            sh 'echo " Unit test"'
+            bat 'echo " Unit test"'
           }
         }
       }
     }
     stage('Frontend') {
       steps {
-        sh 'echo "frontend"'
+        bat 'echo "frontend"'
       }
     }
     stage('static code analsysis') {
@@ -32,7 +32,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'echo "deploy"'
+        bat 'echo "deploy"'
       }
     }
   }
