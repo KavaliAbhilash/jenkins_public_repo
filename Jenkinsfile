@@ -1,7 +1,7 @@
 pipeline {
   agent any
   parameters {
-        string(name: 'SVNCHKOUTURL', defaultValue: 'test', description: 'How should I greet the world?')
+        string(name: 'SVNCHKOUTURL', defaultValue: 'https://acm.ultimatix.net/svn/Ultimatix_EAG/Project/DevOpsCoE/DevOpsSrc/CR_DevOpsPilot/SourceCode/ALTReports', description: 'How should I greet the world?')
     }
   stages {
     stage('build') {
