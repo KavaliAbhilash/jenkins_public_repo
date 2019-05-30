@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  parameters {
+        string(name: 'SVNCHKOUTURL', defaultValue: 'test', description: 'How should I greet the world?')
+    }
   stages {
     stage('build') {
       steps {
@@ -10,7 +13,9 @@ pipeline {
       parallel {
         stage('perf') {
           steps {
-            build 'TEST_JOB'
+            build 'TEST_JOB' , parameters:[
+              string(name: 'VALUE_NAME',value: "${params.SVNCHKOUTURL}")
+ ]
           }
         }
         stage('Unit') {
