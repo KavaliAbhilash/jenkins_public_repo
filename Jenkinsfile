@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Unit') {
           steps {
-            bat 'echo " Unit test"'
+            bat 'echo " Unit test" > TEST_FILE'
           }
         }
       }
