@@ -19,6 +19,8 @@ pipeline {
         stage('Unit') {
           steps {
             bat 'echo " Unit test" > TEST_FILE'
+            test_variable = readFile 'TEST_FILE'
+            bat 'echo ${test_variable}'
           }
         }
       }
