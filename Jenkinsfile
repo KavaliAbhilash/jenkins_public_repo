@@ -23,7 +23,7 @@ pipeline {
              
              TEST_VALUE = readFile 'TEST_FILE'
             }
-            echo ${TEST_VALUE}
+            echo "${TEST_VALUE}"
           }
         }
       }
