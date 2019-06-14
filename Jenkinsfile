@@ -41,6 +41,7 @@ pipeline {
     stage('Deploy') {
       steps {
         bat 'echo "deploy"'
+        input message: 'Do u want to continue?'
       }
     }
   }
